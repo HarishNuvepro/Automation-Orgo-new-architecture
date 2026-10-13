@@ -1,0 +1,79 @@
+====================================================================================================
+SCENARIO : TC1 - Login orgo portal with valid credentials
+STATUS   : PASSED
+====================================================================================================
+14:11:52.945 [TestNG-PoolService-0] INFO  DotEnvLoader                   - Environment 'elb' loaded from D:\Automation_Orgo\Automation_Orgo_UI_Test\.env.elb — 28 key(s)
+14:11:59.777 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - AWS Account Lab sheet → 51 test cases loaded
+14:12:06.652 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - GCP Account Lab sheet → 51 test cases loaded
+14:12:06.663 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - Lab sheets → lab_data.json (102 test cases)
+14:12:06.865 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - User sheet → user_data.json (28 fields)
+14:12:06.866 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - Excel → JSON complete. Output: D:\Automation_Orgo\Automation_Orgo_UI_Test\src\test\resources\testdata
+14:12:06.874 [TestNG-PoolService-0] INFO  TestDataManager                - TestDataManager ready — 102 lab test cases, 28 user fields
+14:12:06.875 [TestNG-PoolService-0] INFO  Hook                           - Run folder: ./test-output/2026-10-13_14-11-52 | Thread: TestNG-PoolService-0
+14:12:14.618 [TestNG-PoolService-0] WARN  CredentialManager              - GEMINI_API_KEY not found in env or .env — using fallback from ConstantFilePath
+14:12:14.620 [TestNG-PoolService-0] INFO  Hook                           - Browser ready | Thread: TestNG-PoolService-0
+14:12:14.656 [TestNG-PoolService-0] INFO  HealingCache                   - Loaded — healed: 49, known failures: 95
+14:12:20.050 [TestNG-PoolService-0] WARN  SelfHealingLocator             - Attempt 1 FAILED (PlaywrightException): Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\utils\stackTrace.js:50:17)
+    at LongStandingScope._race (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\utils\manualPromise.js:81:43
+    at Array.map (<anonymous>)
+    at LongStandingScope.raceMultiple (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\frames.js:908:40)
+    at async C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\frames.js:996:29
+    at async ProgressController.run (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\progress.js:91:22)
+    at async FrameDispatcher.click (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\dispatchers\frameDispatcher.js:152:12)
+    at async LongStandingScope._race (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\dispatchers\dispatcher.js:86:14)
+    at async DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\dispatchers\dispatcher.js:351:22)
+}
+Call log:
+- waiting for locator("//li[@class='dropdown']//a[@class='dropdown-toggle']")
+
+14:12:20.125 [TestNG-PoolService-0] WARN  SelfHealingLocator             - Attempt 2 FAILED (PlaywrightException): Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\dispatchers\dispatcher.js:266:44)
+    at transport.onmessage (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+14:12:20.128 [TestNG-PoolService-0] WARN  SelfHealingLocator             - Attempt 3 FAILED (PlaywrightException): Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\dispatchers\dispatcher.js:266:44)
+    at transport.onmessage (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+14:12:20.130 [TestNG-PoolService-0] ERROR SelfHealingLocator             - FAILED — all attempts exhausted for: user profile dropdown
+14:12:20.140 [TestNG-PoolService-0] INFO  HealingReportLogger            - Saved 1 healing records to ./test-output/2026-10-13_14-11-52/reports/healing_report.json
+14:12:20.148 [TestNG-PoolService-0] WARN  SelfHealingLocator             - Failed to take healing screenshot: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\dispatchers\dispatcher.js:266:44)
+    at transport.onmessage (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+14:12:20.153 [TestNG-PoolService-0] WARN  Hook                           - Logout failed: Self-healing failed after 2 retries. Original: Locator@//li[@class='dropdown']//a[@class='dropdown-toggle'], Tried: Locator@//li[@class='dropdown']//a[@class='dropdown-toggle'], Method: none
+14:12:20.658 [TestNG-PoolService-0] WARN  Hook                           - Login page validation: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\server\dispatchers\dispatcher.js:266:44)
+    at transport.onmessage (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-18115740701593432481\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+14:12:20.662 [TestNG-PoolService-0] INFO  HealingReportLogger            - Saved 1 healing records to ./test-output/2026-10-13_14-11-52/reports/healing_report.json
+14:12:20.664 [TestNG-PoolService-0] INFO  HealingReportLogger            - Saved 1 healing records to ./test-output/2026-10-13_14-11-52/reports/healing_report.json
+

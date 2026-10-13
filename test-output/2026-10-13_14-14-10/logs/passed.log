@@ -1,0 +1,16 @@
+====================================================================================================
+SCENARIO : TC1 - Login orgo portal with valid credentials
+STATUS   : PASSED
+====================================================================================================
+14:14:11.264 [TestNG-PoolService-0] INFO  DotEnvLoader                   - Environment 'elb' loaded from D:\Automation_Orgo\Automation_Orgo_UI_Test\.env.elb — 28 key(s)
+14:14:27.318 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - AWS Account Lab sheet → 51 test cases loaded
+14:14:40.163 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - GCP Account Lab sheet → 51 test cases loaded
+14:14:40.199 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - Lab sheets → lab_data.json (102 test cases)
+14:14:40.844 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - User sheet → user_data.json (28 fields)
+14:14:40.845 [TestNG-PoolService-0] INFO  ExcelToJsonConverter           - Excel → JSON complete. Output: D:\Automation_Orgo\Automation_Orgo_UI_Test\src\test\resources\testdata
+14:14:40.866 [TestNG-PoolService-0] INFO  TestDataManager                - TestDataManager ready — 102 lab test cases, 28 user fields
+14:14:40.867 [TestNG-PoolService-0] INFO  Hook                           - Run folder: ./test-output/2026-10-13_14-14-10 | Thread: TestNG-PoolService-0
+14:17:37.884 [TestNG-PoolService-0] WARN  CredentialManager              - GEMINI_API_KEY not found in env or .env — using fallback from ConstantFilePath
+14:17:37.894 [TestNG-PoolService-0] INFO  Hook                           - Browser ready | Thread: TestNG-PoolService-0
+14:17:37.988 [TestNG-PoolService-0] INFO  HealingCache                   - Loaded — healed: 49, known failures: 95
+

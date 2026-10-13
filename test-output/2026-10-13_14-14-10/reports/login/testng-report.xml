@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testng-results failed="0" passed="1" skipped="0" total="1">
+    <suite duration-ms="218002" name="io.cucumber.core.plugin.TestNGFormatter">
+        <test duration-ms="218002" name="io.cucumber.core.plugin.TestNGFormatter">
+            <class name="Login to the Orgo portal">
+                <test-method duration-ms="217474" finished-at="2026-10-13T08:47:48.749922500Z" name="TC1 - Login orgo portal with valid credentials" started-at="2026-10-13T08:44:11.212177200Z" status="PASS"/>
+            </class>
+        </test>
+    </suite>
+</testng-results>

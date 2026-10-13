@@ -1,0 +1,244 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Automation_Orgo</groupId>
+  <artifactId>Automation_Orgo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>6.11.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <version>6.11.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>6.11.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.microsoft.playwright</groupId>
+      <artifactId>playwright</artifactId>
+      <version>1.40.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>4.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>4.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-picocontainer</artifactId>
+      <version>6.11.0</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <version>5.1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.10.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.14</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <source>11</source>
+          <target>11</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  EXECUTION PROFILES — use: mvn test -P<profile-id>          ║
+    ║  mvn test              → smoke  (default)                   ║
+    ║  mvn test -Plogin      → login module only                  ║
+    ║  mvn test -Pusers      → user management module only        ║
+    ║  mvn test -Plabs       → labs module only                   ║
+    ║  mvn test -Pregression → all @regression scenarios          ║
+    ║  mvn test -Pfull       → login + users + labs (sequential)  ║
+    ║  mvn test -Pparallel   → all TCs parallel (TC58 excluded),  ║
+    ║                          then TC59 bulk-delete sequential   ║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+  <profiles>
+
+    <!-- ── DEFAULT: smoke ─────────────────────────────────────── -->
+    <profile>
+      <id>smoke</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng-suites/smoke-suite.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- ── login module ───────────────────────────────────────── -->
+    <profile>
+      <id>login</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng-suites/login-suite.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- ── users module ───────────────────────────────────────── -->
+    <profile>
+      <id>users</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng-suites/users-suite.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- ── labs module ────────────────────────────────────────── -->
+    <profile>
+      <id>labs</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng-suites/labs-suite.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- ── regression (all @regression tags) ─────────────────── -->
+    <profile>
+      <id>regression</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng-suites/regression-suite.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- ── full suite (login + users + labs) ─────────────────── -->
+    <profile>
+      <id>full</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng-suites/full-suite.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- ── parallel (all TCs except TC58, then TC59 cleanup) ─── -->
+    <profile>
+      <id>parallel</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng-suites/parallel-all-suite.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+  </profiles>
+
+</project>

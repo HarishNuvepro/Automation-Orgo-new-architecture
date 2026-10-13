@@ -1,0 +1,58 @@
+2026-10-13 14:01:41.069 [main] INFO  Generic_Utility.ExecutionContext     - Created execution folder: ./test-output/2026-10-13_14-01-41
+2026-10-13 14:01:41.210 [main] INFO  Generic_Utility.ExecutionContext     - _latest → 2026-10-13_14-01-41
+2026-10-13 14:01:41.210 [main] INFO  runner.ExecutionSetupListener        - Suite 'Login Module Suite' — run folder: ./test-output/2026-10-13_14-01-41
+2026-10-13 14:01:42.051 [TestNG-PoolService-0] INFO  Generic_Utility.DotEnvLoader         - Environment 'elb' loaded from D:\Automation_Orgo\Automation_Orgo_UI_Test\Automation_Orgo_UI_Test\.env.elb — 28 key(s)
+2026-10-13 14:01:50.071 [TestNG-PoolService-0] INFO  G.ExcelToJsonConverter               - AWS Account Lab sheet → 51 test cases loaded
+2026-10-13 14:01:59.314 [TestNG-PoolService-0] INFO  G.ExcelToJsonConverter               - GCP Account Lab sheet → 51 test cases loaded
+2026-10-13 14:01:59.326 [TestNG-PoolService-0] INFO  G.ExcelToJsonConverter               - Lab sheets → lab_data.json (102 test cases)
+2026-10-13 14:01:59.545 [TestNG-PoolService-0] INFO  G.ExcelToJsonConverter               - User sheet → user_data.json (28 fields)
+2026-10-13 14:01:59.545 [TestNG-PoolService-0] INFO  G.ExcelToJsonConverter               - Excel → JSON complete. Output: D:\Automation_Orgo\Automation_Orgo_UI_Test\Automation_Orgo_UI_Test\src\test\resources\testdata
+2026-10-13 14:01:59.555 [TestNG-PoolService-0] INFO  Generic_Utility.TestDataManager      - TestDataManager ready — 102 lab test cases, 28 user fields
+2026-10-13 14:01:59.557 [TestNG-PoolService-0] INFO  stepDefinitions.Hook                 - Run folder: ./test-output/2026-10-13_14-01-41 | Thread: TestNG-PoolService-0
+2026-10-13 14:02:08.313 [TestNG-PoolService-0] WARN  Generic_Utility.CredentialManager    - GEMINI_API_KEY not found in env or .env — using fallback from ConstantFilePath
+2026-10-13 14:02:08.315 [TestNG-PoolService-0] INFO  stepDefinitions.Hook                 - Browser ready | Thread: TestNG-PoolService-0
+2026-10-13 14:02:08.336 [TestNG-PoolService-0] INFO  Generic_Utility.HealingCache         - Loaded — healed: 49, known failures: 95
+2026-10-13 14:02:22.419 [TestNG-PoolService-0] WARN  Generic_Utility.SelfHealingLocator   - Attempt 1 FAILED (TimeoutError): Error {
+  message='Timeout 10000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 10000ms exceeded.
+    at ProgressController.run (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\progress.js:87:26)
+    at Frame.click (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\frames.js:995:23)
+    at FrameDispatcher.click (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\frameDispatcher.js:152:30)
+    at FrameDispatcher._handleCommand (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\dispatcher.js:351:39)
+}
+Call log:
+- waiting for locator("//li[@class='dropdown']//a[@class='dropdown-toggle']")
+
+2026-10-13 14:03:24.538 [TestNG-PoolService-0] WARN  Generic_Utility.SelfHealingLocator   - Attempt 2 FAILED (TimeoutError): Error {
+  message='Timeout 10000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 10000ms exceeded.
+    at ProgressController.run (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\progress.js:87:26)
+    at Frame.click (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\frames.js:995:23)
+    at FrameDispatcher.click (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\frameDispatcher.js:152:30)
+    at FrameDispatcher._handleCommand (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\dispatcher.js:351:39)
+}
+Call log:
+- waiting for locator("//li[@class='dropdown']//a[@class='dropdown-toggle']")
+
+2026-10-13 14:03:34.550 [TestNG-PoolService-0] WARN  Generic_Utility.SelfHealingLocator   - Attempt 3 FAILED (TimeoutError): Error {
+  message='Timeout 10000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 10000ms exceeded.
+    at ProgressController.run (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\progress.js:87:26)
+    at Frame.click (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\frames.js:995:23)
+    at FrameDispatcher.click (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\frameDispatcher.js:152:30)
+    at FrameDispatcher._handleCommand (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-940193772870193105\package\lib\server\dispatchers\dispatcher.js:351:39)
+}
+Call log:
+- waiting for locator("//li[@class='dropdown']//a[@class='dropdown-toggle']")
+
+2026-10-13 14:03:34.551 [TestNG-PoolService-0] ERROR Generic_Utility.SelfHealingLocator   - FAILED — all attempts exhausted for: user profile dropdown
+2026-10-13 14:03:34.553 [TestNG-PoolService-0] INFO  Generic_Utility.HealingReportLogger  - Saved 1 healing records to ./test-output/2026-10-13_14-01-41/reports/healing_report.json
+2026-10-13 14:03:34.838 [TestNG-PoolService-0] WARN  stepDefinitions.Hook                 - Logout failed: Self-healing failed after 2 retries. Original: Locator@//li[@class='dropdown']//a[@class='dropdown-toggle'], Tried: Locator@//li[@class='dropdown']//a[@class='dropdown-toggle'], Method: none
+2026-10-13 14:03:35.350 [TestNG-PoolService-0] INFO  Generic_Utility.HealingReportLogger  - Saved 1 healing records to ./test-output/2026-10-13_14-01-41/reports/healing_report.json
+2026-10-13 14:03:35.352 [TestNG-PoolService-0] INFO  Generic_Utility.HealingReportLogger  - Saved 1 healing records to ./test-output/2026-10-13_14-01-41/reports/healing_report.json

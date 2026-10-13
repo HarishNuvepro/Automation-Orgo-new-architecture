@@ -1,0 +1,4 @@
+Run folder : ./test-output/2026-10-13_13-54-36
+Started    : 2026-10-13 13:59:33
+------------------------------------------------------------------
+PASSED  [  4m 56s]  TC1 - Login orgo portal with valid credentials

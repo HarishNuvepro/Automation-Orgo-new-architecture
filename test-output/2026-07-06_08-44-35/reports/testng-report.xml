@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testng-results failed="0" passed="4" skipped="0" total="4">
+    <suite duration-ms="1996872" name="io.cucumber.core.plugin.TestNGFormatter">
+        <test duration-ms="1996872" name="io.cucumber.core.plugin.TestNGFormatter">
+            <class name="Batch Provision with Lazy Lab Request AWS functionality">
+                <test-method duration-ms="659397" finished-at="2026-07-06T03:25:37.574488200Z" name="AWS_TC46 - Lazy Lab Actions - Create, Stop, Start and Delete Lab - Account" started-at="2026-07-06T03:14:38.111708900Z" status="PASS"/>
+                <test-method duration-ms="585248" finished-at="2026-07-06T03:35:22.851467400Z" name="AWS_TC47 - Lazy Lab Actions - Cleanup, Suspend and Resume via Policy Assignment - Account" started-at="2026-07-06T03:25:37.593487200Z" status="PASS"/>
+                <test-method duration-ms="336338" finished-at="2026-07-06T03:40:59.212936500Z" name="AWS_TC48 - Lazy Lab Actions - Assign Budget, Remove All Budget and Set Budget via Policy Assignment - Account" started-at="2026-07-06T03:35:22.865466200Z" status="PASS"/>
+                <test-method duration-ms="414369" finished-at="2026-07-06T03:47:53.612502800Z" name="AWS_TC49 - Lazy Lab Actions - Quota Duration, Quota Budget, Manually Remove Budget and Quota Top-Up Budget - Account" started-at="2026-07-06T03:40:59.236936Z" status="PASS"/>
+            </class>
+        </test>
+    </suite>
+</testng-results>

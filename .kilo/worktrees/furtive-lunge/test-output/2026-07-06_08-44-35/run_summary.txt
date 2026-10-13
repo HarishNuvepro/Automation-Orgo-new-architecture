@@ -1,0 +1,7 @@
+Run folder : ./test-output/2026-07-06_08-44-35
+Started    : 2026-07-06 08:55:37
+------------------------------------------------------------------
+PASSED  [ 10m 59s]  AWS_TC46 - Lazy Lab Actions - Create, Stop, Start and Delete Lab - Account
+PASSED  [  9m 45s]  AWS_TC47 - Lazy Lab Actions - Cleanup, Suspend and Resume via Policy Assignment - Account
+PASSED  [  5m 36s]  AWS_TC48 - Lazy Lab Actions - Assign Budget, Remove All Budget and Set Budget via Policy Assignment - Account
+PASSED  [  6m 54s]  AWS_TC49 - Lazy Lab Actions - Quota Duration, Quota Budget, Manually Remove Budget and Quota Top-Up Budget - Account

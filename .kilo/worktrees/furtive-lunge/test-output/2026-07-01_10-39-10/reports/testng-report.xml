@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testng-results failed="1" passed="0" skipped="0" total="1">
+    <suite duration-ms="81075" name="io.cucumber.core.plugin.TestNGFormatter">
+        <test duration-ms="81075" name="io.cucumber.core.plugin.TestNGFormatter">
+            <class name="User Actions">
+                <test-method duration-ms="80547" finished-at="2026-07-01T05:10:32.756815100Z" name="TC46 - Verify user search works correctly with partial match values" started-at="2026-07-01T05:09:12.143827600Z" status="FAIL">
+                    <exception class="com.microsoft.playwright.PlaywrightException">
+                        <message><![CDATA[Given open the browser and enter the Url....................................passed
+And login as tenant admin...................................................passed
+When navigate to organization and click on users tab........................passed
+And click on create a user button...........................................passed
+And enter user creation details for partial match search test...............passed
+When click on create button.................................................passed
+Then validate user created successfully.....................................passed
+When navigate to organization and click on users tab........................passed
+And search by partial login id and verify results are returned..............failed
+And click on logout.........................................................skipped
+Then validate login page is displayed.......................................skipped
+]]></message>
+                        <full-stacktrace><![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Error: strict mode violation: locator("//table[@id='usersListTable']//td[contains(normalize-space(),'harish142124278')]") resolved to 2 elements:
+    1) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).first()
+    2) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).nth(1)
+
+  name='Error
+  stack='Error: Error: strict mode violation: locator("//table[@id='usersListTable']//td[contains(normalize-space(),'harish142124278')]") resolved to 2 elements:
+    1) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).first()
+    2) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).nth(1)
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\javascript.js:241:12)
+    at async C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\frames.js:628:24
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\frames.js:912:24)
+    at async ProgressController.run (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\progress.js:91:22)
+    at async FrameDispatcher.waitForSelector (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\dispatchers\frameDispatcher.js:100:85)
+    at async LongStandingScope._race (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\dispatchers\dispatcher.js:86:14)
+    at async DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\dispatchers\dispatcher.js:351:22)
+}
+Call log:
+- waiting for locator("//table[@id='usersListTable']//td[contains(normalize-space(),'harish142124278')]") to be visible
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:129)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1060)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$7(LocatorImpl.java:594)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:594)
+	at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:590)
+	at Generic_Utility.WebDriverUtility.waitForElementVisibility(WebDriverUtility.java:63)
+	at stepDefinitions.User.search_by_partial_login_id_and_verify_results_are_returned(User.java:2496)
+	at ✽.search by partial login id and verify results are returned(file:///C:/Users/HarishKumar/Downloads/Automation_Orgo/Automation_Orgo_UI_Test/Automation_Orgo_UI_Test/./src/test/java/FeatureFiles/users/user_management.feature:670)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Error: strict mode violation: locator("//table[@id='usersListTable']//td[contains(normalize-space(),'harish142124278')]") resolved to 2 elements:
+    1) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).first()
+    2) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).nth(1)
+
+  name='Error
+  stack='Error: Error: strict mode violation: locator("//table[@id='usersListTable']//td[contains(normalize-space(),'harish142124278')]") resolved to 2 elements:
+    1) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).first()
+    2) <td>harish142124278</td> aka getByRole(AriaRole.GRIDCELL, new Page.GetByRoleOptions().setName("harish142124278")).nth(1)
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\javascript.js:241:12)
+    at async C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\frames.js:628:24
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\frames.js:912:24)
+    at async ProgressController.run (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\progress.js:91:22)
+    at async FrameDispatcher.waitForSelector (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\dispatchers\frameDispatcher.js:100:85)
+    at async LongStandingScope._race (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\dispatchers\dispatcher.js:86:14)
+    at async DispatcherConnection.dispatch (C:\Users\HARISH~1\AppData\Local\Temp\playwright-java-9479964772995798722\package\lib\server\dispatchers\dispatcher.js:351:22)
+}
+Call log:
+- waiting for locator("//table[@id='usersListTable']//td[contains(normalize-space(),'harish142124278')]") to be visible
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:209)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:129)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1060)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$7(LocatorImpl.java:594)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:594)
+	at com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:590)
+	at Generic_Utility.WebDriverUtility.waitForElementVisibility(WebDriverUtility.java:63)
+	at stepDefinitions.User.search_by_partial_login_id_and_verify_results_are_returned(User.java:2496)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:134)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:131)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+        </test>
+    </suite>
+</testng-results>
